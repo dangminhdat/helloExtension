@@ -15,7 +15,7 @@ $(function() {
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         if (request.message === "find_first_form") {
-            $('#formId').val(request.formId);
+            $('#formId').val("#"+ request.formId);
         }
     }
 );

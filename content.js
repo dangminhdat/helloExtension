@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener(
 
         if (request.message === "start_to_fill_form") {
             var formId = request.formId;
-            var root = $('#' + formId);
+            var root = $(document).find(formId);
             fillOutForm(root);
         }
     }
