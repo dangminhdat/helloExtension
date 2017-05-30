@@ -1,15 +1,19 @@
 {
     "manifest_version": 2,
 
-    "name": "GTmetrix Analyzer Plugin",
-    "description": "This extension will analyze a page using GTmetrix",
+    "name": "Open First Link",
+    "description": "This extension will open the first link found in page immediately",
     "version": "1.0",
-
-    "browser_action": {
-        "default_icon": "icon.png",
-        "default_popup": "popup.html"
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": ["lib/jquery-3.2.1.min.js", "content.js"]
+    }],
+    "background": {
+        "scripts": ["background.js"]
     },
-    "permissions": [
-        "activeTab"
-    ]
+    "browser_action": {
+        "default_icon": "icon.png"
+    }
 }
