@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
 
-    "name": "Open First Link",
-    "description": "This extension will open the first link found in page immediately",
+    "name": "Auto Fill Form",
+    "description": "This extension will fill out the form by Form Id",
     "version": "1.0",
     "content_scripts": [{
         "matches": [
@@ -10,10 +10,8 @@
         ],
         "js": ["lib/jquery-3.2.1.min.js", "content.js"]
     }],
-    "background": {
-        "scripts": ["background.js"]
-    },
     "browser_action": {
+        "default_popup": "popup.html",
         "default_icon": "icon.png"
     }
 }
